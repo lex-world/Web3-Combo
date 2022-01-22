@@ -106,7 +106,7 @@ export default function Contract() {
                 console.log("options22", options);
                 Moralis.executeFunction(options).then((response) =>
                   setResponses({ ...responses, [name]: { result: response, isLoading: false } })
-                );
+                ).catch(err => console.log(err));
               }
             }}
           >
